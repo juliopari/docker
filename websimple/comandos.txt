@@ -1,0 +1,13 @@
+#crear imagen (Dockerfile esta en la ruta /d/docker-juliopari/websimple)
+docker build /d/docker-juliopari/websimple --tag websimple:latest
+
+# Login a Dockerhub
+docker login –username juliopari –password 123
+
+# Tager imagen
+docker tag websimple:latest juliopari/websimple:latest
+
+# Enviar imagen a dockerhub
+docker push juliopari/websimple:latest
+
+Resultado: https://hub.docker.com/repository/docker/juliopari/websimple
